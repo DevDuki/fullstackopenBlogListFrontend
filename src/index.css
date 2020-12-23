@@ -1,0 +1,27 @@
+.notifications {
+  background: lightgray;
+  font-size: 20px;
+  border: solid;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.error {
+  color: red;
+}
+
+.notification {
+  color: green;
+}
+
+.blog-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.blog-list > li {
+  border: 1.5px solid rgb(102, 102, 231);
+  border-radius: 3px;
+  margin: 1rem 0;
+}

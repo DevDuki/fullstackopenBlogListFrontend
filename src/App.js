@@ -18,7 +18,7 @@ const App = () => {
   useEffect(() => {
     blogService.getAll().then(blogs =>
       setBlogs( blogs )
-    )  
+    )
   }, [])
 
   useEffect(() => {
@@ -75,7 +75,7 @@ const App = () => {
       setTimeout(() => {
         setErrorMessage(null)
       }, 5000)
-    } 
+    }
   }
 
   const updateBlog = async (blogObject) => {
@@ -127,17 +127,17 @@ const App = () => {
     <div>
       <h2>{user === null ? 'Log in to application' : 'Blogs'}</h2>
       <Notification errorMessage={errorMessage} notification={notification} />
-      {user === null
-        ? loginForm()
-        : <div>
-            <p>{user.username} logged in</p>      
-            <button onClick={handleLogout}>logout</button>
-            {blogForm()}
-          </div>
+      {user === null ?
+        loginForm() :
+        <div>
+          <p>{user.username} logged in</p>
+          <button onClick={handleLogout}>logout</button>
+          {blogForm()}
+        </div>
       }
       <ul className='blog-list'>
-        {blogs.sort((a, b) => b.likes - a.likes).map((blog) => 
-          <Blog 
+        {blogs.sort((a, b) => b.likes - a.likes).map((blog) =>
+          <Blog
             key={blog.id} blog={blog} loggedUser={user}
             editBlog={updateBlog} removeBlog={deleteBlog}
           />

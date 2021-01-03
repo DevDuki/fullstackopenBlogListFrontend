@@ -31,7 +31,7 @@ const Blog = ({ blog, editBlog, loggedUser, removeBlog }) => {
   return (
     <li style={showWhenLogged}>
       {blog.title} by {blog.author ? blog.author : 'unknown'}
-      <button onClick={() => setExpand(!isExpanded)}>{isExpanded ? 'hide' : 'view'}</button>
+      <button onClick={() => setExpand(!isExpanded)}>{isExpanded ? 'close' : 'view'}</button>
       <br/>
       {isExpanded &&
         <>

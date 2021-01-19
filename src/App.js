@@ -106,9 +106,9 @@ const App = () => {
         setNotification(null)
       }, 5000)
     } catch (exception) {
-      setNotification('Failed deleting Blog')
+      setErrorMessage('Failed deleting Blog')
       setTimeout(() => {
-        setNotification(null)
+        setErrorMessage(null)
       }, 5000)
     }
   }
